@@ -66,11 +66,29 @@ class ProductoModelMongoDB {
     /* CRUD -> U: UPDATE -> http method PUT */
     async updateProducto(id, producto) {
 
+        try {
+
+            const resultado = await ProductoModel.updateOne({_id: id},{$set: producto})
+            console.log(resultado)
+
+            const productoActualizado = await ProductoModel.findById(id)
+
+            return { resultado, productoActualizado }
+            
+        } catch (error) {
+            console.log(`Error en updateProducto: ${error}`)
+        }
     }
 
     /* CRUD -> D: DELETE -> http method DELETE */
     async deleteProducto(id) {
-
+        try {
+            //await ProductoModel.deleteOne({_id: id})    
+            const productoBorrado = await ProductoModel.findByIdAndDelete(id)
+            return productoBorrado
+        } catch (error) {
+            console.log(`Error en deleteProducto ${error}`)
+        }   
     }
 }
 
