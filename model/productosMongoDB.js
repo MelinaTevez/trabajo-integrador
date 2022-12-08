@@ -46,9 +46,13 @@ class ProductoModelMongoDB {
 
     /* CRUD -> R: Read ALL -> http method GET */
     async readProductos() {
-
-        const productos = await ProductoModel.find({})
-        return productos
+        
+        try {
+            const productos = await ProductoModel.find({})
+            return productos
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     /* CRUD -> R: Read ONE -> http method GET */
@@ -74,7 +78,7 @@ class ProductoModelMongoDB {
             const productoActualizado = await ProductoModel.findById(id)
 
             return { resultado, productoActualizado }
-            
+
         } catch (error) {
             console.log(`Error en updateProducto: ${error}`)
         }

@@ -1,3 +1,4 @@
+const ProductoModelFile = require('./productosFile')
 const ProductoModelMongoDB = require('./productosMongoDB')
 
 class ProductoModel {
@@ -10,6 +11,11 @@ class ProductoModel {
                 mongodb.conectarDB()
                 return mongodb
 
+            case 'FILE':
+                console.log('**** PERSISTENCIA EN FILE SYSTEM (productos) ****')
+                const file = new ProductoModelFile()
+                return file  
+                  
             default:
                 console.log('No paso ningún tipo')
                 break
