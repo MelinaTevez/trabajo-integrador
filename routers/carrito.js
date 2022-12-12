@@ -5,8 +5,6 @@ const controller = require('../controller/carrito')
 
 /* POST - request para agregar un producto al carrito */
 
-routerCarrito.post('/', (req, res) => {
-    res.send('Recibiendo Imagen')
-})
+routerCarrito.post('/', controller.guardarCarrito)
 
 module.exports = routerCarrito

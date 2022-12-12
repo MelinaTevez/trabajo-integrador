@@ -7,5 +7,7 @@
 			"path": "public"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "proyecto-integrador-3ra-etapa"
+	}
 }
