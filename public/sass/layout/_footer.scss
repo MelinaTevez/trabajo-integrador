@@ -1,0 +1,102 @@
+.footer{
+    background-color: $colorPrimario;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 30vh;
+    font-family: "Oswald", sans-serif;
+
+    &__seguinos {
+        padding: 15px;
+    }
+
+    &__seguinos h4{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    &__seguinos img{
+        width: 40px;
+        margin: 5px;
+    }
+
+    @media (max-width: 768px) {
+
+        justify-content: flex-start;
+        flex-direction: column;
+        height: fit-content;
+    
+        &__seguinos h4{
+            font-size: 22px;
+            padding: 5px;
+        
+        }
+        &__seguinos img{
+            width: 30px;
+            margin: 2px;
+        }
+    }
+
+    &__newsletter{
+        height: 30vh;
+        width: 70vw;
+        justify-content: center;
+        border-left: 5px solid $colorTipografia ;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &__newsletter h4 {
+        font-size: 50px;
+        letter-spacing: 20px;
+    }
+
+    &__newsletter p {
+        margin:10px;
+       
+    }
+
+    &__newsletter-form input{
+        width: 30vw;
+        height: 25px;
+        border-radius: 5px;
+    }
+
+    &__newsletter-form button{
+        background-color: $colorTipografia;
+        color: $colorBase;
+        text-transform: uppercase;
+        border-radius: 5px;
+        height: 25px;
+        width:15vw;
+        margin: 10px;
+    }
+
+    @media (max-width: 768px) {
+        
+        &__newsletter{
+             height: fit-content;
+            width: 100vw;
+            justify-content: flex-start;
+            border-left:none ;
+            border-top: 3px solid $colorTipografia ; 
+        }
+
+        &__newsletter h4 {
+            font-size: 30px;
+        }
+
+        &__newsletter p {
+            font-size: 16px;
+        
+        }
+        &__newsletter-form input{
+            width: 50vw;
+        }
+
+        &__newsletter-form button{
+            width: fit-content;
+            margin: 10px; 
+        }
+    }
+
+}

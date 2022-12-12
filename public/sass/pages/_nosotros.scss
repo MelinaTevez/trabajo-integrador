@@ -1,0 +1,295 @@
+.search-bar {
+    &__logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nosotros-section{
+
+     /*----- NOSOTROS HEADER -----*/
+
+    &__header h1{
+        font-size: 60px;
+        color:$colorTipografia;
+        background-color: $colorCuaternario;
+        letter-spacing: 5px;
+        height: 30vh;
+        /* background-image: url(../../img/otras-img/nosotros-img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3%; 
+    }
+
+    &__header p {
+        font-size: 22px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    
+
+    @media (max-width: 768px) {
+        &__header h1{
+            font-size: 30px;
+            height: 30vh;
+        }
+
+        &__header p {
+            font-size: 18px;
+            padding: 1em;
+        }
+    
+    }
+
+    /*----- NOSOTROS MISIÓN -----*/
+
+    &__mision{
+        height: 40vh;
+        background-color: $colorCuaternario;
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    &__mision-img img{
+        height: 40vh;
+    }
+
+    &__mision-texto{
+        font-family: "Oswald", sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__mision-texto h2{
+        color: $colorSecundario;
+        font-size: 70px;
+        padding: 10px;
+    }
+
+    &__mision-texto p{
+        font-size: 20px;
+        width:60vw ;
+    }
+  
+    @media (max-width: 768px) {
+        &__mision{
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+    
+        &__mision-img img{
+            width: 100%;
+        }
+    
+        &__mision-texto h2{
+            text-align: center; 
+            font-size: 40px;
+        }
+    
+        &__mision-texto p{
+            font-size: 16px;
+            width:80vw;
+            padding: 10px;
+        }
+    
+    }
+        
+    /*----- NOSOTROS HISTORIA -----*/
+
+    &__historia{
+        height: 40vh;
+        background-image: linear-gradient(to right, rgba(92, 17, 88, 0.562),rgba(89, 34, 110, 0.5),rgb(27, 25, 25));/*  url(../../img/otras-img/historia-img.webp); */
+        background-repeat: no-repeat;
+        background-position: 50% 50%; 
+        background-size: cover;
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__historia h2,
+    &__historia p {
+        background-color:$colorTipografia;
+        color: $colorBase;
+        width: 50vw;
+        padding: 10px;
+        text-align: center;
+        
+    }
+
+    &__historia h2{
+        font-size: 65px;
+        font-family: 'Times New Roman', Times, serif;
+        color: $colorPrimario;
+    }
+
+    &__historia p {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+        &__historia{
+            height: fit-content;
+            background-size: auto;
+    
+        }
+    
+        &__historia h2,
+        &__historia p {
+            width: 60vw;
+            height: 35vh;
+
+        }
+    
+        &__historia h2{
+            font-size: 38px;
+            height: fit-content;
+        }
+    
+        &__historia p {
+            font-size: 16px;
+        }
+    }
+
+    /*----- NOSOTROS ENCOTRA TU ESTILO -----*/
+
+    &__estilo{
+        height: 50vh;
+        background-color: $colorTerciario;
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+
+    }
+
+    &__estilo h2{
+        color: $colorPrimario;
+        font-size: 90px;
+        padding: 40px;
+        position: absolute;
+        color: $colorBase;
+        letter-spacing: 15px;
+        text-shadow:0 0 8px black;
+    }
+
+    &__estilo img{
+        height: 45vh;
+        margin: 10px;
+    }
+
+
+    &__estilo img:hover{
+        height: 48vh;
+        box-shadow: 0 1px 10px $colorPrimario;
+        transition: height 1s;
+    }
+
+    @media (max-width: 768px) {
+        &__estilo{
+            height: fit-content;
+            flex-wrap: wrap;
+        }
+    
+        &__estilo h2{
+            font-size: 50px;
+            padding: 20px;
+            letter-spacing: 5px;
+        }
+    
+        &__estilo img{
+            height: 25vh;
+            margin: 5px;
+        }
+
+        &__estilo img:hover{
+            height: 25vh;
+        }
+    }
+
+    /*----- NOSOTROS LOCALES -----*/
+
+    &__locales-titulo{
+        height: 20vh;
+        background-color: $colorPrimario;
+        text-align: center;
+        margin-top: 5%;
+    }
+    
+    &__locales-titulo h2{
+        font-size: 80px;
+        color: $colorTipografia;
+
+    }
+
+    &__locales-mapa{
+        display: flex;
+        justify-content: center;
+        margin: 0.5em;
+    }
+
+
+    @media (max-width: 768px) {
+        &__locales-titulo{
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__locales-titulo h2{
+            font-size: 50px;
+            color: $colorTipografia;
+        }
+    
+        &__locales-titulo img{
+            width: 80vw;
+            margin: 5px auto;
+        }
+
+    }
+
+    &__locales-informacion{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        background-color: $colorCuaternario;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        padding-left: 5%;
+        border: 2px solid $colorTipografia;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    
+
+    @media (max-width: 768px) {
+
+        &__locales-informacion{
+            width: 90vw;
+            border: 1px solid $colorTipografia;
+            padding: 5px;
+            font-size: 16px;
+        }
+    }
+
+  
+}

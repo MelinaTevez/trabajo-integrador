@@ -1,0 +1,73 @@
+
+<main class="main-contacto">
+    <h1>CONTACTATE CON NOSOTROS!</h1>
+
+    <form action="" id="formulario-contacto" class="form-contacto" autocomplete="off">
+
+        <div class="form-contacto__motivo">
+            <h2>Motivo de tu consulta</h2>
+            <label for="motivo" id="motivo-label">Selecciona un motivo:</label>
+            <select name="motivo" id="motivo">
+                <option value="cambios-devoluciones">Cambios o devoluciones</option>
+                <option value="envio-pedido">Envió de pedido</option>
+                <option value="no-recibi-mi-pedido">Aún no he recibido mi pedido</option>
+                <option value="stock">Disponibilidad de Stock</option>
+                <option value="promociones">Promociones</option>
+                <option value="agradecimientos">Agradecimientos</option>
+                <option value="otro">Otras consultas</option>
+            </select>
+        </div>
+
+        <div id="form-contacto__informacion" class="form-contacto__info">
+            <h2>Información de contacto</h2>
+
+            <div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre">
+				</div>
+				<p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El nombre no está escrito correctamente. Por favor, vuelve a intentar.</p>
+			</div>
+
+            <div class="formulario__grupo" id="grupo__apellido">
+                <label for="apellido" class="formulario__label">Apellido</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" name="apellido" id="apellido" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El apellido no está escrito correctamente. Por favor, vuelve a intentar.</p>
+            </div>
+
+            <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Dirección de correo electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" name="email" id="email" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El e-mail no está escrito correctamente. Por favor, vuelve a intentar.</p>
+            </div>
+
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="tel" name="telefono" id="telefono" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El teléfo no está escrito correctamente. Por favor, vuelve a intentar.</p>
+            </div>
+
+        </div>
+
+        <div class="form-contacto__comentario">
+            <h2>Escribe tu comentario</h2>
+            <textarea name="comentario" id="comentario" placeholder="Escribe aquí tu comentario..."></textarea>
+        </div>
+
+        <p class="formulario__mensaje" id="formulario__mensaje"> Por favor rellena el formulario correctamente. </p>
+        
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+        </div>
+  
+
+    </form>
+</main>
+

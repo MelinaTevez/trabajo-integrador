@@ -14,6 +14,10 @@ app.use(express.json())
 //app.use('/api/productos', routerProductos) // (1)
 app.use('/api/productos', require('./routers/productos')) // (2)
 
+
+app.use('/api/carrito', require('./routers/carrito')) 
+app.use('/api/upload', require('./routers/upload')) 
+
 const PORT = process.env.PORT
 app.listen(PORT, (err) => {
     if ( err ) throw new Error(`Sucedió un error ${err}`)

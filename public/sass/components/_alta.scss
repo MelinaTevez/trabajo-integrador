@@ -1,0 +1,227 @@
+.container-alta {
+
+    h1{
+        font-size: 40px;
+        text-align: center;
+        color: $colorTipografia;
+        letter-spacing: 5px;
+        background-color: $colorCuaternario;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform:uppercase;
+    
+        @media (max-width: 768px) {
+            font-size: 30px;
+            letter-spacing: 0;
+        }
+    }
+
+    h2 {
+         font-size: 30px;
+         text-transform: uppercase;
+         color: #D074FF;
+         background-color: $colorTipografia;
+         padding: 10px;
+         margin-bottom: 10px;
+     }
+
+    &__form-alta  {
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction: column;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        border: 2px solid $colorTipografia;
+        border-radius: 15px;
+        margin-top: 20px; 
+        margin-bottom: 5%; 
+        width: 70vw;
+
+        & h2 {
+            width: 70vw;
+            background-color: #D074FF;
+            color: $colorTipografia;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+            padding-left: 5%;
+        }
+
+        & input, & label {
+            display: block;
+            margin: 5px;
+            margin-left: 15%;
+            font-size: 20px;
+            font-weight: 400;
+            width: 50vw;
+
+        }
+        
+        & label:not(#label-envio){
+            &::after {
+            content: ' *';
+            color: crimson;
+            }
+        }
+
+        & input {
+            border: 2px solid transparent;
+            border-bottom: 1px solid gray;
+
+            &:focus{
+                border-bottom: 3px solid $colorTerciario;
+                outline: none;
+            }
+        }
+
+        & #envio, #label-envio{
+            margin: 0;
+            margin-left: 13%;
+            margin-top: 5px;
+            padding: 0 ;
+            display: flex;
+            flex-direction: row;
+            width: 100px;
+        }
+    }
+
+    button {
+        display: block; 
+        background-color: rgb(50, 190, 50);
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', 'sans-serif';
+        margin: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorTipografia;
+            color: $colorTipografia ;
+        }
+
+        &:disabled {
+            background-color: rgba(49, 48, 48, 0.671);
+             color: rgb(179, 179, 179); 
+        }
+    }
+
+    form button {
+        margin-left: 40%;
+        margin-bottom: 20px;
+    }
+
+    form div {
+        border: none;
+        color: crimson;
+        background-color: white;
+        font-weight: 400;
+        margin-left: 15%;
+        padding: 5px;
+        border-radius: 5px;
+        display: none;
+    }
+
+    table,th, td {
+        border: 1px solid $colorTipografia;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: larger;
+    }
+
+    td {
+        padding: 5px;
+
+        & button {
+            width: auto;
+            font-size: 12px;
+        }
+    }
+
+    table {
+        width: 98%;
+        margin: 10px;
+    }
+
+    #listado-productos {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+
+        & h2{
+            font-size: 20px;
+        }
+
+        &__form-alta {
+            margin:2%;
+            width:95vw ;
+            border:none;
+            border-radius: none;
+            margin-bottom: 30px; 
+
+            & h2{
+                width: 97vw;
+
+            }
+        }
+    
+        & label, 
+        & input{
+            font-size: 18px;
+            margin-left: 10px;
+            width: 90vw;
+        }
+
+        & #envio, #label-envio{
+            margin: 0;
+            margin-left: 2%;
+            margin-top: 5px;
+            padding: 0 ;
+            
+        }
+
+        & form button {
+            margin: 10px;
+            margin-left: 30%;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        form div {
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        th {
+            font-size: 10px;
+            padding: 1px;
+        }
+
+        td {
+            padding: 0px;
+            font-size: 9px;
+            text-align: center;
+        }
+    
+        td button {
+            width:fit-content;
+            font-size: 8px;
+            padding: 0.5px;
+            margin: 1px;
+            
+        }
+    
+        table {
+            max-width: 95vw;
+            margin: 0.5px;
+            margin-bottom: 15px;
+        }
+    }
+}
