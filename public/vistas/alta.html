@@ -10,42 +10,55 @@
         <!-- Campo de nombre -->
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
 
         <!-- Campo de precio -->
         <label for="precio">Precio</label>
         <input type="text" id="precio" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
         
         <!-- Campo de stock -->
         <label for="stock">Stock</label>
         <input type="text" id="stock" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
 
         <!-- Campo de marca -->
         <label for="marca">Marca</label>
         <input type="text" id="marca" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
 
         <!-- Campo de categoria-->
         <label for="categoria">Categoría</label>
         <input type="text" id="categoria" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
 
         <!-- Campo de detalles -->
         <label for="detalles">Detalles</label>
         <input type="text" id="detalles" />
-        <div></div>
+        <div class="mensaje-validacion"></div>
         
         <!-- Campo de foto -->
-        <label for="foto">Foto</label>
+        <!-- <label for="foto">Foto</label>
         <input type="text" id="foto" />
+        <div></div> -->
+
+        <div id="drop-area">
+            <p>Subir imagen al servidor con <b>file dialog</b> o con <b>drag and drop</b> dentro del área punteada </p>
+            <br>
+            <input type="file" id="foto" accept="image/*">
+            <label class="button" for="foto">File Dialog</label>
+            <br><br>
+            
+            <progress id="progress-bar" max="100" value="0"></progress>
+            
+            <div id="gallery"><img src="" alt=""></div>
+        </div>
+      
+        <!-- Campo de envio -->
+        <label for="envio">Envío</label>
+        <input type="checkbox" id="envio" />
         <div></div>
-
-        <!-- Campo de envio --> 
-       
-        <label for="envio" id="label-envio"><input type="checkbox" id="envio" />Envío</label>
-
+      
         <button>Agregar</button>
         
     </form>

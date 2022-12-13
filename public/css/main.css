@@ -960,6 +960,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
+.container-alta {
+  /* DROP AREA */
+  /* MEDIA QUERIES */
+}
 .container-alta h1 {
   font-size: 40px;
   text-align: center;
@@ -1060,7 +1064,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 40%;
   margin-bottom: 20px;
 }
-.container-alta form div {
+.container-alta form .mensaje-validacion {
   border: none;
   color: crimson;
   background-color: white;
@@ -1090,6 +1094,37 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .container-alta #listado-productos {
   width: 100%;
+}
+.container-alta #drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 80%;
+  margin: 20px;
+  margin-left: 10%;
+  padding: 20px;
+}
+.container-alta .button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  width: 80%;
+  margin: 20px;
+  margin-left: 8%;
+  border-radius: 5px;
+  border-radius: 1px solid #ccc;
+}
+.container-alta #foto {
+  display: none;
+}
+.container-alta #gallery img {
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.container-alta #drop-area.highlight {
+  border-color: #AD5ED6;
 }
 @media (max-width: 768px) {
   .container-alta h2 {

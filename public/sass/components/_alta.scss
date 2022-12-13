@@ -115,7 +115,7 @@
         margin-bottom: 20px;
     }
 
-    form div {
+    form .mensaje-validacion {
         border: none;
         color: crimson;
         background-color: white;
@@ -152,6 +152,46 @@
     #listado-productos {
         width: 100%;
     }
+
+    /* DROP AREA */
+
+    #drop-area {
+        border: 2px dashed #ccc;
+        border-radius: 20px;
+        width: 80%;
+        margin: 20px;
+        margin-left: 10%;
+        padding: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px;
+        background: #ccc;
+        cursor: pointer;
+        width: 80%;
+        margin: 20px;
+        margin-left: 8%;
+        border-radius: 5px;
+        border-radius: 1px solid #ccc;
+    }
+
+    #foto {
+        display: none;
+    }
+
+    #gallery img {
+        width: 100px;
+        margin-top: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    #drop-area.highlight {
+        border-color: $colorPrimario;
+    }
+
+    /* MEDIA QUERIES */
 
     @media (max-width: 768px) {
 
