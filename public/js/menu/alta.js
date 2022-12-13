@@ -1,5 +1,4 @@
 class FormularioAlta {
-
     inputs  = null
     form = null
     button = null
@@ -19,6 +18,7 @@ class FormularioAlta {
     dropArea = null
     progressBar = null
     /* --------------------------------------------------------------------- */
+
     constructor(renderTablaAlta, guardarProducto){
 
       this.inputs = document.querySelectorAll('main form input.data-validation')
@@ -133,18 +133,18 @@ class FormularioAlta {
 
     leerProductoIngresado() {
         return {
-            nombre:     this.inputs[0].value,
-            precio:     this.inputs[1].value,
-            stock:      this.inputs[2].value,
-            marca:      this.inputs[3].value,
-            categoria:  this.inputs[4].value,
-            detalles:   this.inputs[5].value,
-            foto:       this.inputs[6].value,
-            foto: this.imagenSubida ? `/uploads/${this.imagenSubida}`: '',
+          nombre: this.inputs[0].value,
+          precio: this.inputs[1].value,
+          stock: this.inputs[2].value,
+          marca: this.inputs[3].value,
+          categoria: this.inputs[4].value,
+          detalles: this.inputs[5].value,
+          foto: this.imagenSubida ? `/uploads/${this.imagenSubida}`: '',
+          envio: this.inputs[6].checked,
         }
     }
     
-      // Limpiamos los imputs del formulario
+    // Limpiamos los imputs del formulario
     limpiarFormulario() {
         // borro todos los inputs
         this.inputs.forEach(input => {
@@ -172,9 +172,8 @@ class FormularioAlta {
     }
 
     previewFile(file) {
-      const reader = new FileReader() // https://developer.mozilla.org/es/docs/Web/API/FileReader
+      const reader = new FileReader() 
       reader.readAsDataURL(file)
-      //reader.addEventListener('loadend', () => {})
       reader.onloadend = function() {
         const img = document.querySelector('#gallery img')
         img.src = reader.result
@@ -201,7 +200,7 @@ class FormularioAlta {
         this.updateProgress(porcentaje)
       })
 
-      xhr.addEventListener('load', () => { // readyState === 4
+      xhr.addEventListener('load', () => {
         if ( xhr.status === 200) {
           const objImagen = JSON.parse(xhr.response) 
           this.imagenSubida = objImagen.nombre // {nombre: 'imagen.jpg'}

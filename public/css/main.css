@@ -961,6 +961,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 
 .container-alta {
+  /* LISTADO PRODUCTOS */
   /* DROP AREA */
   /* MEDIA QUERIES */
 }
@@ -1098,9 +1099,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .container-alta #drop-area {
   border: 2px dashed #ccc;
   border-radius: 20px;
-  width: 80%;
-  margin: 20px;
-  margin-left: 10%;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  /* margin: 20px;
+  margin-left: 10%; */
   padding: 20px;
 }
 .container-alta .button {
@@ -1108,25 +1113,36 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   padding: 10px;
   background: #ccc;
   cursor: pointer;
-  width: 80%;
-  margin: 20px;
-  margin-left: 8%;
+  width: 90%;
+  margin: auto;
   border-radius: 5px;
   border-radius: 1px solid #ccc;
 }
 .container-alta #foto {
   display: none;
 }
+.container-alta #progress-bar {
+  width: 90%;
+  /*   margin-top: 5px; */
+  margin-bottom: 10px;
+  /* margin: 0;
+  margin-left: 8%; */
+}
 .container-alta #gallery img {
-  width: 100px;
-  margin-top: 10px;
-  margin-right: 10px;
+  width: 30%;
+  margin: auto;
+  /* margin-top: 10px;
+  margin-left: 35%; */
   vertical-align: middle;
 }
 .container-alta #drop-area.highlight {
   border-color: #AD5ED6;
 }
 @media (max-width: 768px) {
+  .container-alta {
+    /* DROP AREA */
+    /* LISTADO PRODUCTOS */
+  }
   .container-alta h2 {
     font-size: 20px;
   }
@@ -1157,9 +1173,31 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-bottom: 15px;
     font-size: 20px;
   }
-  .container-alta form div {
+  .container-alta form .mensaje-validacion {
     font-weight: 400;
     margin-left: 10px;
+  }
+  .container-alta #drop-area {
+    width: 97%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .container-alta .button {
+    width: 95%;
+    margin: 10px;
+    margin-bottom: 3px;
+  }
+  .container-alta #foto {
+    display: none;
+  }
+  .container-alta #progress-bar {
+    width: 95%;
+    margin-left: 10px;
+  }
+  .container-alta #gallery img {
+    width: 70%;
+    vertical-align: middle;
   }
   .container-alta th {
     font-size: 10px;
