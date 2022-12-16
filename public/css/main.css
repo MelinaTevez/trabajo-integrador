@@ -330,37 +330,37 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .card {
   outline: none;
   text-decoration: none;
-  flex-grow: 1;
-  max-width: 200px;
-  height: 360px;
+  max-width: 250px;
+  min-height: 400px;
+  max-height: 470px;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: 3px;
   box-shadow: 0px 1px 10px rgba(148, 80, 161, 0.315);
-  transition: all 800ms ease;
+  transition: all 1000ms ease;
   background-color: white;
 }
 .card:hover, .card:focus {
   box-shadow: 5px 5px 20px rgba(97, 37, 116, 0.479);
-  transform: translateY(-2%);
+  transform: translateY(-0.5%);
 }
 .card__button {
-  background-color: #F8D5F8;
-  font-size: 18px;
+  background-color: #ED93EC;
+  font-size: 16px;
   text-transform: uppercase;
   border-radius: 50px;
-  width: 80%;
-  border: 1px solid #ED93EC;
-  padding: 5px;
-  margin: 10px;
-  margin-left: 10%;
+  width: 70%;
+  border: none;
+  padding: 3px;
+  margin: 5px;
+  margin-left: 15%;
 }
 .card__button:hover {
   /*  box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479); */
   font-weight: 700;
-  background-color: #ED93EC;
+  /* background-color: $colorTerciario; */
 }
 .card__image-container {
-  height: 200px;
+  height: 290px;
   overflow: hidden;
 }
 .card__image {
@@ -373,22 +373,26 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .card__content {
   color: #141414;
   text-align: center;
+  /*   height: 80px; */
 }
 .card__heading {
-  font-family: "Oswald", sans-serif;
-  font-size: 25px;
-  color: #AD5ED6;
+  /*  font-family: "Oswald", sans-serif; */
+  font-size: 16px;
+  /* color: $colorPrimario; */
   text-transform: uppercase;
+  margin: 3px;
 }
 .card__description {
-  padding: 1px;
-  margin: 7px;
-  font-size: 16px;
+  margin: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 15px;
   text-align: start;
 }
 .card__precio {
   font-weight: 700;
   font-size: 18px;
+  color: #EC407A;
 }
 @media (min-width: 1024px) {
   .card {
@@ -397,33 +401,37 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 @media (max-width: 768px) {
   .card {
+    min-width: 80vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    overflow: visible;
-    max-width: 38vw;
+    min-height: 35vh;
   }
   .card:hover, .card:focus {
     box-shadow: none;
     transform: none;
   }
-  .card__heading {
-    font-size: 18px;
-  }
-  .card__description {
-    font-size: 14px;
-  }
   .card__button {
-    font-size: 14px;
-    margin: 5%;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 7px;
     margin-left: 10%;
   }
   .card__button:hover {
     box-shadow: none;
   }
   .card__image-container {
-    height: 150px;
+    height: 30vh;
     overflow: hidden;
+  }
+  .card__heading {
+    font-size: 15px;
+  }
+  .card__description {
+    font-size: 14px;
+  }
+  .card__precio {
+    font-size: 16px;
   }
 }
 
