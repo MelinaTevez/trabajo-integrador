@@ -8,7 +8,7 @@
     left: 15%;
     right: 15%;
     bottom:7%;
-    box-shadow: .3em .3em 10em .3em rgb(26, 3, 63)/* rgba(0,0,0,1) */;
+    box-shadow: .3em .3em 10em .3em rgb(26, 3, 63);
 
     &--visible {
         display: block;
@@ -24,6 +24,7 @@
     th{
         background-color: $colorSecundario;
     }
+
     table {
         width: 60vw;
         margin-top: 2%;  
@@ -33,7 +34,7 @@
     }
 
     .btn {
-        font-size: 25px;
+        font-size: 18px;
         color: white;
         padding: 8px;
         border-radius: 50px;
@@ -47,8 +48,8 @@
         &.btn__cerrarCarrito {
             margin-left: 95%;
             color: $colorTipografia;
-            border: none;
             border-radius: 0%;
+            font-size: 22px;
 
             &:hover {
                 color: crimson;
@@ -58,24 +59,17 @@
         
         &.btn__borrarDelCarrito { 
 
-           /*  border: none; */
-            font-size: 18px;
             color: crimson;
             margin: 0;
+            font-weight: 700;
+            width: 30px;
+            vertical-align: middle ;
 
             &:hover {
-                border: 1px solid crimson;
-                padding: 3px;
+                border-radius: 50%;
+                color: white;
+                background-color: crimson;
             }
-            /* width: 45px;
-            
-            & img{
-                width: 30px;
-                
-                &:hover{
-                    width: 32px;
-                }
-            } */
         }
 
         &.btn-carrito{
@@ -86,21 +80,30 @@
 
         &.btn__vaciarCarrito {
             background-color: grey;
+            padding-left: 20px;
+            padding-right: 20px;
 
             &:hover {
                 background-color:crimson;
-                color: $colorTipografia;
-                border: 2px solid $colorTipografia;
+
             }
         }
-        &.btn__enviarCarrito, &.btn__irAAgregarCarrito   {
-            background-color: $colorTipografia;
-            
-            &:hover {
-                background-color: $colorSecundario;
-                color: $colorTipografia;
-                border: 2px solid $colorTipografia;
 
+        &.btn__enviarCarrito{
+            background-color: $colorSecundario;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            &:hover {
+                background-color: $colorPrimario;
+                color: $colorTipografia;
+
+            }
+            & img{
+                width: 25px;
+                height: auto;
+                margin: 5px;
+                vertical-align: middle;
             }
 
         }
@@ -115,6 +118,7 @@
     h2, h3 {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         padding: 10px;
         background-color: white;
         color: $colorTipografia;
@@ -123,14 +127,22 @@
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 50px;
         margin-top: 3%;
         font-weight: 700;
+
+        & img{
+            width: 150px;
+            margin-left: 42%;
+        }
     }
 
     h3{
         font-size: 25px;
         margin-top: 1%;
+        padding-left: 20%;
+        padding-right: 20%;
+    
     }
 
     #carrito-enviado {
@@ -156,7 +168,7 @@
         }
 
         .btn {
-            font-size: 15px;
+            font-size: 12px;
 
             &.btn__cerrarCarrito {
                 margin-left: 90%;
@@ -164,30 +176,51 @@
             }
     
             &.btn__borrarDelCarrito { 
-                font-size: 10px;
+                font-size: 12px;
                 padding:1px;
              
             }
 
-            &.btn__irAAgregarCarrito {
-                margin-left: 22%;
-                margin-top: 5px;
+                
+            &.btn__vaciarCarrito, &.btn__enviarCarrito{
+                
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+
+            &.btn__vaciarCarrito{
+                background-color: crimson;
+            }
+            
+            &.btn__enviarCarrito{
+
+                color: $colorTipografia;
+                & img{
+                    width: 12px;
+                    height: auto;
+                    margin: 3px;
+                
+                }
+
             }
           
         }
         
-        h2, h3 {
-            padding: 5px;
-        }
 
         h2 {
             font-size: 30px;
             margin-top: 1%;
+
+            & img {
+                width: 60px;
+            }
         }
 
         h3{
-            font-size: 20px;
-        
+            font-size: 18px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
     }
 }

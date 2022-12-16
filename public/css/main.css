@@ -168,7 +168,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
-  background-color: #ff518b;
+  background-color: #e96fe7;
   color: #fff8f8;
   border-radius: 50%;
 }
@@ -1268,7 +1268,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 5%;
 }
 .section-carrito .btn {
-  font-size: 25px;
+  font-size: 18px;
   color: white;
   padding: 8px;
   border-radius: 50px;
@@ -1281,30 +1281,23 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-carrito .btn.btn__cerrarCarrito {
   margin-left: 95%;
   color: #141414;
-  border: none;
   border-radius: 0%;
+  font-size: 22px;
 }
 .section-carrito .btn.btn__cerrarCarrito:hover {
   color: crimson;
 }
 .section-carrito .btn.btn__borrarDelCarrito {
-  /*  border: none; */
-  font-size: 18px;
   color: crimson;
   margin: 0;
-  /* width: 45px;
-
-  & img{
-      width: 30px;
-
-      &:hover{
-          width: 32px;
-      }
-  } */
+  font-weight: 700;
+  width: 30px;
+  vertical-align: middle;
 }
 .section-carrito .btn.btn__borrarDelCarrito:hover {
-  border: 1px solid crimson;
-  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  background-color: crimson;
 }
 .section-carrito .btn.btn-carrito {
   display: flex;
@@ -1312,19 +1305,26 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .section-carrito .btn.btn__vaciarCarrito {
   background-color: grey;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .section-carrito .btn.btn__vaciarCarrito:hover {
   background-color: crimson;
-  color: #141414;
-  border: 2px solid #141414;
 }
-.section-carrito .btn.btn__enviarCarrito, .section-carrito .btn.btn__irAAgregarCarrito {
-  background-color: #141414;
-}
-.section-carrito .btn.btn__enviarCarrito:hover, .section-carrito .btn.btn__irAAgregarCarrito:hover {
+.section-carrito .btn.btn__enviarCarrito {
   background-color: #D074FF;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section-carrito .btn.btn__enviarCarrito:hover {
+  background-color: #AD5ED6;
   color: #141414;
-  border: 2px solid #141414;
+}
+.section-carrito .btn.btn__enviarCarrito img {
+  width: 25px;
+  height: auto;
+  margin: 5px;
+  vertical-align: middle;
 }
 .section-carrito .btn.btn__irAAgregarCarrito {
   margin-left: 30%;
@@ -1333,6 +1333,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-carrito h2, .section-carrito h3 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 10px;
   background-color: white;
   color: #141414;
@@ -1340,13 +1341,19 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-align: center;
 }
 .section-carrito h2 {
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 3%;
   font-weight: 700;
+}
+.section-carrito h2 img {
+  width: 150px;
+  margin-left: 42%;
 }
 .section-carrito h3 {
   font-size: 25px;
   margin-top: 1%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 .section-carrito #carrito-enviado {
   color: #2ECC71;
@@ -1368,29 +1375,42 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-left: 2%;
   }
   .section-carrito .btn {
-    font-size: 15px;
+    font-size: 12px;
   }
   .section-carrito .btn.btn__cerrarCarrito {
     margin-left: 90%;
     margin-right: 5px;
   }
   .section-carrito .btn.btn__borrarDelCarrito {
-    font-size: 10px;
+    font-size: 12px;
     padding: 1px;
   }
-  .section-carrito .btn.btn__irAAgregarCarrito {
-    margin-left: 22%;
-    margin-top: 5px;
+  .section-carrito .btn.btn__vaciarCarrito, .section-carrito .btn.btn__enviarCarrito {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .section-carrito h2, .section-carrito h3 {
-    padding: 5px;
+  .section-carrito .btn.btn__vaciarCarrito {
+    background-color: crimson;
+  }
+  .section-carrito .btn.btn__enviarCarrito {
+    color: #141414;
+  }
+  .section-carrito .btn.btn__enviarCarrito img {
+    width: 12px;
+    height: auto;
+    margin: 3px;
   }
   .section-carrito h2 {
     font-size: 30px;
     margin-top: 1%;
   }
+  .section-carrito h2 img {
+    width: 60px;
+  }
   .section-carrito h3 {
-    font-size: 20px;
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -1519,5 +1539,5 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 
 .active {
-  background-color: #ff518b;
+  background-color: #e96fe7;
 }/*# sourceMappingURL=main.css.map */
