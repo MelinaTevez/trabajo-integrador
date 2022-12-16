@@ -19,6 +19,6 @@ const feedBack = (req,res) => {
     res.redirect('/')
 }
 
-export default {
+module.exports = {
     feedBack
 }
