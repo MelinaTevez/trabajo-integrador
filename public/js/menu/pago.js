@@ -1,5 +1,5 @@
 // Agrega credenciales de SDK (Public KEY - Del vendedor)
-const mercadopago = new MercadoPago("", {
+const mercadopago = new MercadoPago("TEST-a11fe3b9-7614-4979-8d38-edaa0f099144", {
     locale: "es-AR",
 });
 
