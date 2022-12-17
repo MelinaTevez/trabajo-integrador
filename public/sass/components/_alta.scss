@@ -25,23 +25,21 @@
          background-color: $colorTipografia;
          padding: 10px;
          margin-bottom: 10px;
+        
      }
 
     &__form-alta  {
-        display: flex;
-        justify-content: center;
-        align-items:flex-start;
-        flex-direction: column;
         margin-left: 15vw;
         margin-right: 15vw;
-        border: 2px solid $colorTipografia;
+        border: 2px solid $colorSecundario;
         border-radius: 15px;
         margin-top: 20px; 
         margin-bottom: 5%; 
         width: 70vw;
+        box-shadow: 0px 2px 12px rgba(115, 38, 131, 0.562);
 
         & h2 {
-            width: 70vw;
+           
             background-color: #D074FF;
             color: $colorTipografia;
             border-top-left-radius: 13px;
@@ -50,7 +48,6 @@
         }
 
         & input, & label {
-            display: block;
             margin: 5px;
             margin-left: 15%;
             font-size: 20px;
@@ -59,7 +56,7 @@
 
         }
         
-        & label:not(#label-envio){
+        & label:not(#label-envio, #label-file-dialog){
             &::after {
             content: ' *';
             color: crimson;
@@ -81,9 +78,11 @@
             margin-left: 13%;
             margin-top: 5px;
             padding: 0 ;
-            display: flex;
-            flex-direction: row;
             width: 100px;
+        }
+
+        & #envio {
+            margin-left: 0px;
         }
     }
 
@@ -91,22 +90,24 @@
         display: block; 
         background-color: rgb(50, 190, 50);
         color: white;
-        font-size: 25px;
-        padding: 10px;
+        font-size: 22px;
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 50px;
+        border: none;
         text-transform: uppercase;
         font-family: 'Montserrat', 'sans-serif';
         margin: 5px;
         cursor: pointer;
-
+       
         &:hover {
-            background-color: $colorTipografia;
             color: $colorTipografia ;
         }
 
         &:disabled {
             background-color: rgba(49, 48, 48, 0.671);
-             color: rgb(179, 179, 179); 
+            color: rgb(179, 179, 179); 
         }
     }
 
@@ -165,20 +166,24 @@
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: center;
-        /* margin: 20px;
-        margin-left: 10%; */
         padding: 20px;
     }
 
     .button {
         display: inline-block;
-        padding: 10px;
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
         background: #ccc;
         cursor: pointer;
         width: 90%;
         margin: auto;
         border-radius: 5px;
         border-radius: 1px solid #ccc;
+
+        &:hover {
+            background-color: rgba(49, 48, 48, 0.671);
+        }
     }
 
     #foto {
@@ -187,18 +192,13 @@
 
     #progress-bar {
         width: 90%;
-      /*   margin-top: 5px; */
         margin-bottom: 10px;
-        /* margin: 0;
-        margin-left: 8%; */
 
     }
 
     #gallery img {
         width: 30%;
         margin: auto;
-        /* margin-top: 10px;
-        margin-left: 35%; */
         vertical-align: middle;
     }
 
@@ -211,7 +211,8 @@
     @media (max-width: 768px) {
 
         & h2{
-            font-size: 20px;
+            font-size:18px;
+        
         }
 
         &__form-alta {
@@ -220,16 +221,13 @@
             border:none;
             border-radius: none;
             margin-bottom: 30px; 
+            box-shadow: none;
 
-            & h2{
-                width: 97vw;
-
-            }
         }
     
         & label, 
         & input{
-            font-size: 18px;
+            font-size: 16px;
             margin-left: 10px;
             width: 90vw;
         }
@@ -243,15 +241,15 @@
         }
 
         & form button {
-            margin: 10px;
-            margin-left: 30%;
-            margin-bottom: 15px;
-            font-size: 20px;
+            margin: 15px;
+            margin-left: 30%;/*  */
+            font-size: 18px;
         }
 
         form .mensaje-validacion {
             font-weight: 400;
             margin-left: 10px;
+            font-size: 10px;
         }
 
          /* DROP AREA */
@@ -295,13 +293,15 @@
             padding: 0px;
             font-size: 9px;
             text-align: center;
+
         }
 
         td button {
             width:fit-content;
-            font-size: 8px;
+            font-size: 7px;
             padding: 0.5px;
             margin: 1px;
+            margin-bottom: 3px;
             
         }
 

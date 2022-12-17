@@ -119,6 +119,7 @@ class CarritoController extends CarritoModel {
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
         renderTablaCarrito(this.carrito)
     }
+    
     btnIrAAgregar(){
         this.btnCerrarCarrito()
     }
