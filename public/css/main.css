@@ -534,65 +534,78 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .nosotros-section {
   /*----- NOSOTROS HEADER -----*/
   /*----- NOSOTROS MISIÓN -----*/
-  /*----- NOSOTROS HISTORIA -----*/
   /*----- NOSOTROS ENCOTRA TU ESTILO -----*/
+  /*----- NOSOTROS CATEGORIAS -----*/
   /*----- NOSOTROS LOCALES -----*/
 }
+.nosotros-section__header {
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotros-section__header img {
+  height: 70vh;
+  margin: 0%;
+  margin-top: 15px;
+  margin-left: 8%;
+}
 .nosotros-section__header h1 {
-  font-size: 60px;
+  font-family: "Oswald", "sans-serif";
+  font-size: 40px;
   color: #141414;
   background-color: #F8D5F8;
   letter-spacing: 5px;
   height: 30vh;
-  /* background-image: url(../../img/otras-img/nosotros-img.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90vw;
   padding: 3%;
 }
-.nosotros-section__header p {
-  font-size: 22px;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
-}
 @media (max-width: 768px) {
-  .nosotros-section__header h1 {
-    font-size: 30px;
-    height: 30vh;
+  .nosotros-section__header {
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8D5F8;
   }
-  .nosotros-section__header p {
-    font-size: 18px;
-    padding: 1em;
+  .nosotros-section__header img {
+    height: 40vh;
+    margin: 0%;
+    margin-top: 5px;
+  }
+  .nosotros-section__header h1 {
+    font-size: 22px;
+    text-align: center;
+    height: 8vh;
+    width: 100vw;
   }
 }
 .nosotros-section__mision {
   height: 40vh;
-  background-color: #F8D5F8;
+  background-color: white;
   display: flex;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-bottom: 3%;
 }
 .nosotros-section__mision-img img {
   height: 40vh;
+  margin-right: 8%;
 }
 .nosotros-section__mision-texto {
-  font-family: "Oswald", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: "Montserrat", "sans-serif";
+  margin-left: 8%;
+  margin-right: 5%;
+  padding-top: 3%;
 }
 .nosotros-section__mision-texto h2 {
   color: #D074FF;
-  font-size: 70px;
-  padding: 10px;
+  font-size: 35px;
+  padding-bottom: 10px;
 }
 .nosotros-section__mision-texto p {
-  font-size: 20px;
-  width: 60vw;
+  font-size: 18px;
+  width: 50vw;
 }
 @media (max-width: 768px) {
   .nosotros-section__mision {
@@ -602,68 +615,18 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 5%;
   }
-  .nosotros-section__mision-img img {
-    width: 100%;
+  .nosotros-section__mision img {
+    display: none;
   }
-  .nosotros-section__mision-texto h2 {
+  .nosotros-section__mision h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
   }
-  .nosotros-section__mision-texto p {
-    font-size: 16px;
-    width: 80vw;
-    padding: 10px;
-  }
-}
-.nosotros-section__historia {
-  height: 40vh;
-  background-image: linear-gradient(to right, rgba(92, 17, 88, 0.562), rgba(89, 34, 110, 0.5), rgb(27, 25, 25)); /*  url(../../img/otras-img/historia-img.webp); */
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.nosotros-section__historia h2, .nosotros-section__historia p {
-  background-color: #141414;
-  color: #fff8f8;
-  width: 50vw;
-  padding: 10px;
-  text-align: center;
-}
-.nosotros-section__historia h2 {
-  font-size: 65px;
-  font-family: "Times New Roman", Times, serif;
-  color: #AD5ED6;
-}
-.nosotros-section__historia p {
-  font-size: 18px;
-  padding: 15px;
-}
-@media (max-width: 768px) {
-  .nosotros-section__historia {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    background-size: auto;
-  }
-  .nosotros-section__historia h2, .nosotros-section__historia p {
-    width: 60vw;
-    height: 35vh;
-  }
-  .nosotros-section__historia h2 {
-    font-size: 38px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .nosotros-section__historia p {
-    font-size: 16px;
+  .nosotros-section__mision p {
+    font-size: 14px;
+    width: 90vw;
   }
 }
 .nosotros-section__estilo {
@@ -701,28 +664,68 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     height: -moz-fit-content;
     height: fit-content;
     flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .nosotros-section__estilo h2 {
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     letter-spacing: 5px;
   }
   .nosotros-section__estilo img {
-    height: 25vh;
+    height: 20vh;
     margin: 5px;
   }
-  .nosotros-section__estilo img:hover {
-    height: 25vh;
+}
+.nosotros-section__categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotros-section__categorias div {
+  width: 20vw;
+  text-align: center;
+  margin: 15px;
+}
+.nosotros-section__categorias div img {
+  width: auto;
+  height: 35vh;
+}
+.nosotros-section__categorias div h3 {
+  font-size: 18px;
+  padding: 10px;
+  color: #EC407A;
+}
+@media (max-width: 768px) {
+  .nosotros-section__categorias {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .nosotros-section__categorias div {
+    width: 24vw;
+    text-align: center;
+    margin: 2px;
+  }
+  .nosotros-section__categorias div img {
+    width: 18vw;
+    height: auto;
+  }
+  .nosotros-section__categorias div h3 {
+    font-size: 10px;
+    padding: 2px;
+    font-weight: 400;
   }
 }
 .nosotros-section__locales-titulo {
-  height: 20vh;
   background-color: #AD5ED6;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3%;
+  width: 73vw;
+  margin-left: 13%;
 }
 .nosotros-section__locales-titulo h2 {
-  font-size: 80px;
+  font-size: 40px;
   color: #141414;
 }
 .nosotros-section__locales-mapa {
@@ -730,44 +733,40 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   justify-content: center;
   margin: 0.5em;
 }
-@media (max-width: 768px) {
-  .nosotros-section__locales-titulo {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-  }
-  .nosotros-section__locales-titulo h2 {
-    font-size: 50px;
-    color: #141414;
-  }
-  .nosotros-section__locales-titulo img {
-    width: 80vw;
-    margin: 5px auto;
-  }
-}
 .nosotros-section__locales-informacion {
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nosotros-section__locales-informacion div {
+  display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 35vw;
   background-color: #F8D5F8;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 10px;
   padding-left: 5%;
-  border: 2px solid #141414;
+  border: 1px solid #ED93EC;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
-  .nosotros-section__locales-informacion {
+  .nosotros-section__locales-titulo {
+    margin-top: 5%;
+    width: 100vw;
+    margin-left: 0;
+  }
+  .nosotros-section__locales-titulo h2 {
+    font-size: 25px;
+  }
+  .nosotros-section__locales-mapa {
+    margin: 5%;
+  }
+  .nosotros-section__locales-informacion div {
     width: 90vw;
-    border: 1px solid #141414;
-    padding: 5px;
-    font-size: 16px;
+    margin: 5px;
+    font-size: 12px;
   }
 }
 
