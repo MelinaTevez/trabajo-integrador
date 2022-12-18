@@ -407,6 +407,20 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   font-size: 20px;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .section-informacion__div {
+    border-radius: 5px;
+    padding: 8px;
+    width: 25%;
+    margin: 10px;
+  }
+  .section-informacion__div img {
+    height: 40px;
+  }
+  .section-informacion__div h4 {
+    font-size: 12px;
+  }
+}
 
 .card {
   outline: none;
@@ -758,12 +772,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 
 .main-contacto h1 {
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
   color: #141414;
+  background-color: #fff8f8;
+  font-family: "Oswald", "sans-serif";
   letter-spacing: 5px;
-  background-color: #F8D5F8;
-  height: 20vh;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -771,7 +786,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 @media (max-width: 768px) {
   .main-contacto h1 {
     font-size: 30px;
-    letter-spacing: 0;
+    letter-spacing: 2px;
   }
 }
 
@@ -1056,12 +1071,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   /* MEDIA QUERIES */
 }
 .container-alta h1 {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   color: #141414;
   letter-spacing: 5px;
-  background-color: #F8D5F8;
-  height: 20vh;
+  background-color: #fff8f8;
+  font-family: "Oswald", "sans-serif";
+  letter-spacing: 10px;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1069,8 +1086,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 @media (max-width: 768px) {
   .container-alta h1 {
+    height: 10vh;
     font-size: 30px;
-    letter-spacing: 0;
   }
 }
 .container-alta h2 {

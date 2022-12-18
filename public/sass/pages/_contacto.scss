@@ -1,18 +1,19 @@
 
 .main-contacto h1{
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
     color: $colorTipografia;
+    background-color: $colorBase;
+    font-family: 'Oswald', 'sans-serif';
     letter-spacing: 5px;
-    background-color: $colorCuaternario;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 768px) {
         font-size: 30px;
-        letter-spacing: 0;
+        letter-spacing: 2px;
     }
 }
 

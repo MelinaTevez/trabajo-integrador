@@ -161,4 +161,21 @@
             font-weight: 400;
         }
     }
+
+    @media (max-width: 768px) {  
+        &__div {
+            border-radius: 5px;
+            padding: 8px;
+            width: 25%;
+            margin: 10px;
+    
+            & img {
+               height: 40px;
+            }
+    
+            & h4 {
+                font-size: 12px;
+            }
+        }
+    }
 }

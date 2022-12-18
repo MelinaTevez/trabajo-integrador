@@ -1,20 +1,22 @@
 .container-alta {
 
     h1{
-        font-size: 40px;
+        font-size: 50px;
         text-align: center;
         color: $colorTipografia;
         letter-spacing: 5px;
-        background-color: $colorCuaternario;
-        height: 20vh;
+        background-color: $colorBase;
+        font-family: 'Oswald', 'sans-serif';
+        letter-spacing: 10px;
+        height: 15vh;
         display: flex;
         justify-content: center;
         align-items: center;
         text-transform:uppercase;
     
         @media (max-width: 768px) {
+            height: 10vh;
             font-size: 30px;
-            letter-spacing: 0;
         }
     }
 
