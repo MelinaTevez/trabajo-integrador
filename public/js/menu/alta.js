@@ -139,7 +139,7 @@ class FormularioAlta {
           marca: this.inputs[3].value,
           categoria: this.inputs[4].value,
           detalles: this.inputs[5].value,
-          foto: this.imagenSubida ? `/uploads/${this.imagenSubida}`: '/uploads/producto-sin-imagen.png',
+          foto: this.imagenSubida ? `/uploads/${this.imagenSubida}`: '/uploads/sin-imagen.png',
           envio: this.inputs[6].checked,
         }
     }
