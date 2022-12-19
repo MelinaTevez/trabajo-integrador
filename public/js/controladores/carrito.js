@@ -19,16 +19,16 @@ class CarritoController extends CarritoModel {
 
     }
     
-    divCantidad = document.createElement('div')
+   /*  cantidadesDiv = document.createElement('div')
     total = document.getElementsByClassName('total')
 
     totales(){
         setTimeout(()=>{
-            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
-            this.total[1].innerHTML = `Total precio: $${this.getValorCarrito()}`
+            this.total[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
+            this.total[1].innerHTML = `Precio total: $${this.getValorCarrito()}`
         },100)
     }
-
+ */
     obtenerProductoDeCarrito(producto) {
         return this.carrito.find(prod => prod.id == producto.id)
     }
@@ -41,13 +41,13 @@ class CarritoController extends CarritoModel {
             producto.precioTotal = producto.precio * producto.cantidad
             this.carrito.push(producto)
 
-            this.divCantidad.innerHTML = this.getCantidadProductos()
+           /*  this.cantidadesDiv.innerHTML = this.getCantidadProductos() */
 
         } else {
             const productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             productoDeCarrito.cantidad++
-            producto.precioTotal = producto.precio * producto.cantidad
-            this.divCantidad.innerHTML = this.getCantidadProductos()
+           /*  producto.precioTotal = producto.precio * producto.cantidad */
+          /*   this.cantidadesDiv.innerHTML = this.getCantidadProductos() */
         }
 
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
@@ -86,9 +86,9 @@ class CarritoController extends CarritoModel {
             
             await renderTablaCarrito(this.carrito)
 
-            this.divCantidad.innerHTML = this.getCantidadProductos()
-            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
-            this.total[1].innerHTML = `Total precio: $${this.getValorCarrito()}`
+        /*  this.cantidadesDiv.innerHTML = this.getCantidadProductos()
+            this.total[0].innerHTML = `Total productos: ${this.getCantidadProductos()}`
+            this.total[1].innerHTML = `Precio total: $${this.getValorCarrito()}` */
             
             carritoController.contadorCarrito()
         } catch (error) {
@@ -143,9 +143,10 @@ class CarritoController extends CarritoModel {
     
 
     getCantidadProductos(){
-        const cantidadProd = this.carrito.map(prod=>{
+        const cantidadProd = this.carrito.map (prod=>{
             return prod.cantidad
         })
+
 
         const totalProductos = cantidadProd.reduce(
             (previo, actual) => previo + actual,
