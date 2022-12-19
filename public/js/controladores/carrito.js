@@ -16,13 +16,14 @@ class CarritoController extends CarritoModel {
     
     elProductoEstaEnElCarrito(producto) {
         return this.carrito.filter(prod => prod.id == producto.id).length
+
     }
     
     total = document.getElementsByClassName('total')
 
     totales(){
         setTimeout(()=>{
-            this.total[0].innerText = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[0].innerText= `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
             this.total[1].innerText= `Total a pagar: $${this.getValorCarrito()}`
         },100)
     }
@@ -78,7 +79,7 @@ class CarritoController extends CarritoModel {
             this.carrito.splice(index, 1)
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
-            this.total[0].innerText= `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[0].innerText= `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
             this.total[1].innerText= `Total a pagar: $${this.getValorCarrito()}`
             
             carritoController.contadorCarrito()
@@ -134,7 +135,7 @@ class CarritoController extends CarritoModel {
     }
     
 
-    cantidadProductos(){
+    getCantidadProductos(){
         const cantidadProd = this.carrito.map(prod=>{
             return prod.cantidad
         })

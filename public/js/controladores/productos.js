@@ -22,7 +22,7 @@ class ProductoController extends ProductoModel {
     }
 
     async actualizarProducto(id){
-        console.log('actualizarProducto', id)
+        //console.log('actualizarProducto', id)
 
         const producto = formularioAlta.leerProductoIngresado()
         formularioAlta.limpiarFormulario()
@@ -38,7 +38,7 @@ class ProductoController extends ProductoModel {
     }
 
     async borrarProducto(id) { 
-        console.log('borrarProducto', id)
+        //console.log('borrarProducto', id)
     
         let productoBorrado = await productoService.borrarProductoService(id)
     
