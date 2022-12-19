@@ -6,7 +6,7 @@
         text-transform: uppercase;
         
         & img {
-            height: 78vh;
+            height: 65vh;
             margin: 15px;
             margin-left: 5%;
             margin-bottom: 0;
@@ -40,40 +40,29 @@
         
             }
 
-            & button {
-                font-size: 18px;
-                padding: 8px;
-                padding-left: 20px;
-                padding-right: 20px;
-                border-radius: 50px;
-                margin: 15px;
-                cursor: pointer;
-                background-color: $colorCuaternario;
-                text-transform: uppercase;
-                border: 1px solid $colorCuaternario;
-                font-family: 'Montserrat', 'sans-serif';
-
-                &:hover {
-                    border: 1px solid $colorTerciario;
-                }
-                & img {
-                    height: 22px;
-                    width: 22px;
-                    margin: 0px;
-                    vertical-align: middle;
-                }
-            }
         }
 
     } 
 
-    &__p {
-        padding: 10px;
-        font-size: 30px;
+    &__div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         background-color: $colorCuaternario;
-        margin: 0;
+        height: fit-content;
+        & p {
+            padding: 5px;
+            font-size: 28px;
+            margin: 0;
+        }
+    
+        & img {
+            padding: 0;
+            height: 45px;
+            margin: 0;
+        }
     }
-
     @media (max-width: 768px) {
         
         &__header{
@@ -97,21 +86,6 @@
                 & h3{
                     font-size: 18px;
                     letter-spacing: 3px;
-                }
-        
-                & button {
-                    font-size: 12px;
-                    padding: 8px;
-              
-                    &:hover {
-                        border: 1px solid $colorTerciario;
-                    }
-
-                    & img {
-                        height: 15px;
-                        width: 15px;
-                        align-items: center;
-                    }
                 }
             }
         }

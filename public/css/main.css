@@ -279,7 +279,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-transform: uppercase;
 }
 .section-cards__header img {
-  height: 78vh;
+  height: 65vh;
   margin: 15px;
   margin-left: 5%;
   margin-bottom: 0;
@@ -306,32 +306,24 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
 }
-.section-cards__header__div button {
-  font-size: 18px;
-  padding: 8px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 50px;
-  margin: 15px;
-  cursor: pointer;
+.section-cards__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #F8D5F8;
-  text-transform: uppercase;
-  border: 1px solid #F8D5F8;
-  font-family: "Montserrat", "sans-serif";
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.section-cards__header__div button:hover {
-  border: 1px solid #ED93EC;
+.section-cards__div p {
+  padding: 5px;
+  font-size: 28px;
+  margin: 0;
 }
-.section-cards__header__div button img {
-  height: 22px;
-  width: 22px;
-  margin: 0px;
-  vertical-align: middle;
-}
-.section-cards__p {
-  padding: 10px;
-  font-size: 30px;
-  background-color: #F8D5F8;
+.section-cards__div img {
+  padding: 0;
+  height: 45px;
   margin: 0;
 }
 @media (max-width: 768px) {
@@ -354,18 +346,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .section-cards__header__div h3 {
     font-size: 18px;
     letter-spacing: 3px;
-  }
-  .section-cards__header__div button {
-    font-size: 12px;
-    padding: 8px;
-  }
-  .section-cards__header__div button:hover {
-    border: 1px solid #ED93EC;
-  }
-  .section-cards__header__div button img {
-    height: 15px;
-    width: 15px;
-    align-items: center;
   }
   .section-cards__p {
     padding: 7px;

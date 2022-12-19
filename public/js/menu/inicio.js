@@ -30,7 +30,7 @@ async function initInicio(){
     //console.log(productos)
     await renderPlantillaListado(productos)
 
+    
     document.querySelector('.section-cards__p').innerHTML = `Se encontraron ${productos.length} productos`
-
 
 }
