@@ -19,12 +19,13 @@ class CarritoController extends CarritoModel {
 
     }
     
+    divCantidad = document.createElement('div')
     total = document.getElementsByClassName('total')
 
     totales(){
         setTimeout(()=>{
-            this.total[0].innerText= `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
-            this.total[1].innerText= `Total a pagar: $${this.getValorCarrito()}`
+            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
+            this.total[1].innerHTML = `Total precio: $${this.getValorCarrito()}`
         },100)
     }
 
@@ -40,9 +41,13 @@ class CarritoController extends CarritoModel {
             producto.precioTotal = producto.precio * producto.cantidad
             this.carrito.push(producto)
 
+            this.divCantidad.innerHTML = this.getCantidadProductos()
+
         } else {
             const productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             productoDeCarrito.cantidad++
+            producto.precioTotal = producto.precio * producto.cantidad
+            this.divCantidad.innerHTML = this.getCantidadProductos()
         }
 
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
@@ -78,14 +83,16 @@ class CarritoController extends CarritoModel {
             const index = this.carrito.findIndex(prod => prod.id == id)
             this.carrito.splice(index, 1)
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
+            
+            await renderTablaCarrito(this.carrito)
 
-            this.total[0].innerText= `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
-            this.total[1].innerText= `Total a pagar: $${this.getValorCarrito()}`
+            this.divCantidad.innerHTML = this.getCantidadProductos()
+            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.getCantidadProductos()}`
+            this.total[1].innerHTML = `Total precio: $${this.getValorCarrito()}`
             
             carritoController.contadorCarrito()
-            await renderTablaCarrito(this.carrito)
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
