@@ -22,8 +22,8 @@ class CarritoController extends CarritoModel {
 
     totales(){
         setTimeout(()=>{
-            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
-            this.total[1].innerHTML = `Total a pagar: $${this.getValorCarrito()}`
+            this.total[0].innerText = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[1].innerText = `Total a pagar: $${this.getValorCarrito()}`
         },100)
     }
 
@@ -78,8 +78,8 @@ class CarritoController extends CarritoModel {
             this.carrito.splice(index, 1)
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
-            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
-            this.total[1].innerHTML = `Total a pagar: $${this.getValorCarrito()}`
+            this.total[0].innerText = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[1].innerText = `Total a pagar: $${this.getValorCarrito()}`
             
             carritoController.contadorCarrito()
             await renderTablaCarrito(this.carrito)
@@ -135,11 +135,11 @@ class CarritoController extends CarritoModel {
     
 
     cantidadProductos(){
-        const cantidades = this.carrito.map(prod=>{
+        const cantidadProd = this.carrito.map(prod=>{
             return prod.cantidad
         })
 
-        const totalProductos = cantidades.reduce(
+        const totalProductos = cantidadProd.reduce(
             (previo, actual) => previo + actual,
             0
         );
