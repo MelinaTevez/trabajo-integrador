@@ -663,6 +663,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     height: 20vh;
     margin: 5px;
   }
+  .nosotros-section__estilo img:hover {
+    height: 20vh;
+    box-shadow: none;
+    transition: none;
+  }
 }
 .nosotros-section__categorias {
   display: flex;
@@ -1490,6 +1495,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .section-carrito .btn.btn__borrarDelCarrito {
     font-size: 12px;
     padding: 1px;
+  }
+  .section-carrito .btn.btn__borrarDelCarrito:hover {
+    border-radius: none;
+    color: crimson;
+    background-color: white;
   }
   .section-carrito .btn.btn__vaciarCarrito, .section-carrito .btn.btn__enviarCarrito {
     padding-left: 10px;

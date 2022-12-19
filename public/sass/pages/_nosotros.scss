@@ -168,6 +168,12 @@
             & img{
                 height: 20vh;
                 margin: 5px;
+
+                &:hover{
+                    height: 20vh;
+                    box-shadow: none;
+                    transition: none;
+                }
             }
 
         }

@@ -198,6 +198,11 @@
                 font-size: 12px;
                 padding:1px;
              
+                &:hover {
+                    border-radius: none;
+                    color:crimson;
+                    background-color: white;
+                }
             }
 
                 
