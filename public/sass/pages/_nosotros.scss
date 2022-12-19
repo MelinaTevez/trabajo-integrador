@@ -179,6 +179,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+
+        & h2 {
+            width: 100vw;
+            padding: 15px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #e96fe7;
+            color: white;
+        }
 
         & div {
             width: 20vw;
@@ -186,8 +196,8 @@
             margin: 15px;
 
             & img {
-                width: auto;
-                height:  35vh;
+                width: 15vw;
+                height:  auto;
             }
 
             & h3{
@@ -204,15 +214,21 @@
         &__categorias{
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: flex-start;
             
+            & h2 {
+                padding: 5px;
+                font-size: 20px;
+                margin-bottom: 5%;
+            }
+
             & div {
-                width: 24vw;
+                width: 20vw;
                 text-align: center;
-                margin: 2px;
+                margin: 8px;
     
                 & img {
-                    width: 18vw;
+                    width: 20vw;
                     height:  auto;
                 }
     
