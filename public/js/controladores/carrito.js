@@ -2,20 +2,29 @@ class CarritoController extends CarritoModel {
 
     constructor(){
         super()
-
+        
         try {
             
             this.carrito = JSON.parse(localStorage.getItem('carrito')) || []
         } catch (error) {
-
+            
             console.error('Algo ocurrió con la lectura del localStorage', error)
             this.carrito = []
             localStorage.setItem('carrito', this.carrito)
         }
     }
-
+    
     elProductoEstaEnElCarrito(producto) {
         return this.carrito.filter(prod => prod.id == producto.id).length
+    }
+    
+    total = document.getElementsByClassName('total')
+
+    totales(){
+        setTimeout(()=>{
+            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[1].innerHTML = `Total a pagar: $${this.getValorCarrito()}`
+        },100)
     }
 
     obtenerProductoDeCarrito(producto) {
@@ -23,10 +32,11 @@ class CarritoController extends CarritoModel {
     }
 
     agregarAlCarrito(producto){
-        //console.log(producto)
-
         if(!this.elProductoEstaEnElCarrito(producto)) {
+
             producto.cantidad = 1
+            producto.precioTotal;
+            producto.precioTotal = producto.precio * producto.cantidad
             this.carrito.push(producto)
 
         } else {
@@ -44,11 +54,11 @@ class CarritoController extends CarritoModel {
 
         const carritoContador = document.getElementById('search-bar__carrito-contador')
 
-        let carrito = this.carrito;
-        let cantidadDeProdEnCarrito = 0;
+        let carrito = this.carrito
+        let cantidadDeProdEnCarrito = 0
         
         carrito.forEach(producto => {
-            cantidadDeProdEnCarrito = cantidadDeProdEnCarrito + producto.cantidad; 
+            cantidadDeProdEnCarrito = cantidadDeProdEnCarrito+producto.cantidad; 
         });
         
         carritoContador.innerHTML = cantidadDeProdEnCarrito;
@@ -68,6 +78,10 @@ class CarritoController extends CarritoModel {
             this.carrito.splice(index, 1)
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
+            this.total[0].innerHTML = `Cantidad de productos en el carrito: ${this.cantidadProductos()}`
+            this.total[1].innerHTML = `Total a pagar: $${this.getValorCarrito()}`
+            
+            carritoController.contadorCarrito()
             await renderTablaCarrito(this.carrito)
         } catch (error) {
             console.log(error)
@@ -94,13 +108,12 @@ class CarritoController extends CarritoModel {
             
             setTimeout( async () => {
                 elemSectionCarrito.classList.remove('section-carrito--visible')
-                /* mostraCarrito = false */
                 console.log(preference)
                 await renderPago(preference)
             }, 0)
+            
+            this.actualizarContadorCarrito(this.carrito) 
 
-
-            //this.actualizarContadorCarrito(this.carrito) 
               
         } catch (error) {
             console.error(error)
@@ -120,10 +133,35 @@ class CarritoController extends CarritoModel {
         renderTablaCarrito(this.carrito)
     }
     
-    btnIrAAgregar(){
-        this.btnCerrarCarrito()
+
+    cantidadProductos(){
+        const cantidades = this.carrito.map(prod=>{
+            return prod.cantidad
+        })
+
+        const totalProductos = cantidades.reduce(
+            (previo, actual) => previo + actual,
+            0
+        );
+
+        return totalProductos
     }
- 
+
+    getValorCarrito(){
+        const precios = this.carrito.map(prod=>{
+            const precios = parseInt(prod.precio)
+            const preciosTotal = precios * prod.cantidad
+            return preciosTotal
+        })
+
+        const totalPrecios = precios.reduce(
+            (previo, actual) => previo + actual,
+            0
+        );
+
+        return totalPrecios
+    }
+
 }
 
 const carritoController = new CarritoController()

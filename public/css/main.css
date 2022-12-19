@@ -1355,6 +1355,15 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-right: 5%;
   margin-left: 5%;
 }
+.section-carrito .total {
+  font-size: 18px;
+  text-align: start;
+  margin: 5px;
+  margin-left: 45%;
+  padding: 5px;
+  font-family: "Montserrat", "sans-serif";
+  text-transform: none;
+}
 .section-carrito .btn {
   font-size: 18px;
   color: white;
@@ -1462,6 +1471,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     width: 95vw;
     margin-right: 2%;
     margin-left: 2%;
+  }
+  .section-carrito .total {
+    font-size: 12px;
+    margin: 2px;
+    margin-left: 20%;
+    padding: 2px;
   }
   .section-carrito .btn {
     font-size: 12px;
