@@ -46,8 +46,8 @@
     }
 
     &__newsletter h4 {
-        font-size: 50px;
-        letter-spacing: 20px;
+        font-size: 40px;
+        letter-spacing: 15px;
     }
 
     &__newsletter p {
@@ -56,19 +56,22 @@
     }
 
     &__newsletter-form input{
-        width: 30vw;
+        width: 25vw;
         height: 25px;
         border-radius: 5px;
+        margin: 0px;
+        padding-left: 10px ;
     }
 
     &__newsletter-form button{
         background-color: $colorTipografia;
         color: $colorBase;
         text-transform: uppercase;
-        border-radius: 5px;
         height: 25px;
         width:15vw;
+        border-radius: 50px;
         margin: 10px;
+       
     }
 
     @media (max-width: 768px) {
@@ -78,24 +81,25 @@
             width: 100vw;
             justify-content: flex-start;
             border-left:none ;
-            border-top: 3px solid $colorTipografia ; 
+            border-top: 1px solid $colorTipografia ; 
         }
 
         &__newsletter h4 {
-            font-size: 30px;
+            font-size: 25px;
         }
 
         &__newsletter p {
-            font-size: 16px;
+            font-size: 14px;
         
         }
         &__newsletter-form input{
-            width: 50vw;
+            width: 45vw;
         }
 
         &__newsletter-form button{
-            width: fit-content;
-            margin: 10px; 
+            font-size: 12px;
+            width: 45vw;
+            margin: 0px; 
         }
     }
 

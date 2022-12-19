@@ -90,10 +90,18 @@
             }
         }
     
-        &__p {
-            padding: 7px;
-            font-size: 20px;
+        &__div {
+            margin-top: 8%;
             
+            & p {
+                font-size: 22px;
+            }
+        
+            & img {
+                padding: 0;
+                height: 35px;
+                margin: 0;
+            }
         }
     }
 }
