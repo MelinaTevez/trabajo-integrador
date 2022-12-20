@@ -84,8 +84,8 @@
     
         &{
             min-width: 80vw; 
-            height: fit-content;
             min-height: 35vh;
+            height: fit-content;
     
             &:hover, 
             &:focus {
@@ -105,7 +105,8 @@
         }
 
         &__image-container {
-            height: 30vh;
+            min-height:35vh;
+            max-height: 45vh;
             overflow: hidden;
         
         }

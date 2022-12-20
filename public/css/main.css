@@ -480,10 +480,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 @media (max-width: 768px) {
   .card {
     min-width: 80vw;
+    min-height: 35vh;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    min-height: 35vh;
   }
   .card:hover, .card:focus {
     box-shadow: none;
@@ -499,7 +499,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     box-shadow: none;
   }
   .card__image-container {
-    height: 30vh;
+    min-height: 35vh;
+    max-height: 45vh;
     overflow: hidden;
   }
   .card__heading {
@@ -1319,10 +1320,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 7px;
-    padding: 0.5px;
+    font-size: 8px;
+    padding: 1px;
     margin: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    margin-top: 3px;
   }
   .container-alta table {
     max-width: 95vw;
