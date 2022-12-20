@@ -1320,10 +1320,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 8px;
+    font-size: 6px;
     padding: 1px;
     margin: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     margin-top: 3px;
   }
   .container-alta table {
